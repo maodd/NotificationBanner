@@ -24,6 +24,8 @@ class NotificationBannerUtilities: NSObject {
         if UIDevice.current.userInterfaceIdiom != .phone {
             return false
         }
-        return UIScreen.main.nativeBounds.height == 2436
+        return UIScreen.main.nativeBounds.height == 1792 // iPhone XR
+            || UIScreen.main.nativeBounds.height == 2436 // iPhone X / XS
+            || UIScreen.main.nativeBounds.height == 2688 // iPhone XS Max
     }
 }
